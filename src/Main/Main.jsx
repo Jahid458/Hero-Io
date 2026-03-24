@@ -1,13 +1,16 @@
 import React from "react";
 import { Outlet } from "react-router";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Main = () => {
   return (
     <div>
-        <h1>Hello Main Layout Present</h1>
-      <div className=" container mx-auto">
+        <Navbar></Navbar>
+      <div className=" container mx-auto min-h-[calc(100vh-160px)]">
         <Outlet />
       </div>
+      <Footer></Footer>
     </div>
   );
 };
