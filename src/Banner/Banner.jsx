@@ -5,11 +5,11 @@ import appimg from "../assets/app_store.png";
 
 const Banner = () => {
   return (
-    <div className="w-full pt-10 flex flex-col gap-16 mb-10">
+    <div className="w-full pt-10 flex flex-col gap-16 mb-8">
       <div className="text-center max-w-4xl mx-auto px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
           We Build <br />
-          <span className="bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">   
             Productive
           </span>{" "}
           Apps

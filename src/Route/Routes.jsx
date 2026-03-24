@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Main from "../Main/Main";
 import Home from "../Home/Home";
+import App from "../Components/App/App";
 
 export const routes = createBrowserRouter([
   {
@@ -11,6 +12,14 @@ export const routes = createBrowserRouter([
         index: true,
         Component: Home,
       },
+      {
+        path: 'apps',
+        Component: App,
+        loader: async () => {
+          const res = await fetch('/data.json')
+          return res.json()
+        }
+      }
     ],
   },
 ]);

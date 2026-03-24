@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://i.ibb.co.com/bjq5X5k2/spotify.webp",
+    "title": "Spotify",
+    "companyName": "Spotify AB",
+    "id": 1,
+    "description": "Spotify is a digital music streaming service that gives you access to millions of songs, podcasts, and videos from artists all over the world.",
+    "size": 118,
+    "reviews": 24500,
+    "ratingAvg": 4.7,
+    "downloads": "12M",
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 450 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 5500 },
+      { "name": "5 star", "count": 17050 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/HpnDCQvp/netflix.jpg",
+    "title": "Netflix",
+    "companyName": "Netflix Inc.",
+    "id": 2,
+    "description": "Watch TV shows and movies anytime, anywhere. Netflix is the world's leading streaming entertainment service.",
+    "size": 95,
+    "reviews": 31000,
+    "ratingAvg": 4.5,
+    "downloads": "9.8M",
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 2200 },
+      { "name": "4 star", "count": 8500 },
+      { "name": "5 star", "count": 19000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/m5HXw7NY/duolingo.png",
+    "title": "Duolingo",
+    "companyName": "Duolingo Inc.",
+    "id": 3,
+    "description": "Learn a new language for free with Duolingo. Fun, effective, and 100% free language learning app.",
+    "size": 74,
+    "reviews": 18700,
+    "ratingAvg": 4.8,
+    "downloads": "8.7M",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 13000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/JjcQWhH7/notoins.webp",
+    "title": "Notion",
+    "companyName": "Notion Labs Inc.",
+    "id": 4,
+    "description": "Notion is an all-in-one workspace where you can write, plan, collaborate and organize your work.",
+    "size": 56,
+    "reviews": 12400,
+    "ratingAvg": 4.6,
+    "downloads": "6.5M",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 3800 },
+      { "name": "5 star", "count": 7150 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/zTJ1tBVS/canva.png",
+    "title": "Canva",
+    "companyName": "Canva Pty Ltd",
+    "id": 5,
+    "description": "Canva is a graphic design platform that allows users to create social media graphics, presentations, posters and other visual content.",
+    "size": 88,
+    "reviews": 22000,
+    "ratingAvg": 4.9,
+    "downloads": "11M",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 4100 },
+      { "name": "5 star", "count": 17000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/8gGcZz6f/headspace.png",
+    "title": "Headspace",
+    "companyName": "Headspace Inc.",
+    "id": 6,
+    "description": "Headspace is your guide to mindfulness for your everyday life. Meditate, sleep better and reduce stress.",
+    "size": 62,
+    "reviews": 9800,
+    "ratingAvg": 4.5,
+    "downloads": "4.3M",
+    "ratings": [
+      { "name": "1 star", "count": 180 },
+      { "name": "2 star", "count": 270 },
+      { "name": "3 star", "count": 750 },
+      { "name": "4 star", "count": 2600 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/pj5hKvjv/todoist.png",
+    "title": "Todoist",
+    "companyName": "Doist Inc.",
+    "id": 7,
+    "description": "Todoist is the world's #1 task manager and to-do list app for organizing your life and work.",
+    "size": 45,
+    "reviews": 8600,
+    "ratingAvg": 4.7,
+    "downloads": "3.9M",
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 2300 },
+      { "name": "5 star", "count": 5500 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Dgmb5KZN/adobe.jpg",
+    "title": "Adobe Lightroom",
+    "companyName": "Adobe Inc.",
+    "id": 8,
+    "description": "Adobe Lightroom is a powerful photo editing and organization app for photographers of all skill levels.",
+    "size": 132,
+    "reviews": 15300,
+    "ratingAvg": 4.4,
+    "downloads": "7.1M",
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 8000 }
+    ]
+  }
+]
