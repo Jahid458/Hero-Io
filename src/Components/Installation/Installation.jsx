@@ -9,12 +9,9 @@ const Installation = () => {
   const data = useLoaderData();
   const [sortType, setSortType] = useState("");
   const installedAppsStr = getInstalledApps();
+  
   const installedApps = installedAppsStr.map((i) => parseInt(i));
-
-  // Filter installed apps
   const installationDone = data.filter((d) => installedApps.includes(d.id));
-
-  // Sorting logic
   const sortedApps = [...installationDone].sort((a, b) => {
     if (sortType === "high") return b.downloads - a.downloads;
     if (sortType === "low") return a.downloads - b.downloads;
@@ -45,7 +42,7 @@ const Installation = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
         <p className="text-lg font-semibold text-gray-700">
-          {installationDone.length} Installed
+          {installationDone.length} Apps Found
         </p>
 
 
