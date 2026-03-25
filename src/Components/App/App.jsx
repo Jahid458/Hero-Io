@@ -9,7 +9,6 @@ export default function App() {
 
     const handleSearch = (e) => {
         const value = e.target.value.toLowerCase();
-
         const result = data.filter(applist =>
             applist.title.toLowerCase().includes(value)
         );

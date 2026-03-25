@@ -9,14 +9,26 @@ const Installation = () => {
   const data = useLoaderData();
   const [sortType, setSortType] = useState("");
   const installedAppsStr = getInstalledApps();
-  
+
   const installedApps = installedAppsStr.map((i) => parseInt(i));
   const installationDone = data.filter((d) => installedApps.includes(d.id));
+
+  const parseDownloads = (value) => {
+    if (typeof value === "number") return value;
+    if (value.includes("M")) return parseFloat(value) * 1000000;
+    if (value.includes("K")) return parseFloat(value) * 1000;
+    return parseFloat(value);
+  };
   const sortedApps = [...installationDone].sort((a, b) => {
-    if (sortType === "high") return b.downloads - a.downloads;
-    if (sortType === "low") return a.downloads - b.downloads;
+    const aDownloads = parseDownloads(a.downloads);
+    const bDownloads = parseDownloads(b.downloads);
+
+    if (sortType === "high") return bDownloads - aDownloads;
+    if (sortType === "low") return aDownloads - bDownloads;
     return 0;
   });
+
+  
   const handleUninstall = (id) => {
     uninstallApp(id);
     toast.success("App Uninstalled Successfully!");
@@ -45,7 +57,6 @@ const Installation = () => {
           {installationDone.length} Apps Found
         </p>
 
-
         <select
           onChange={(e) => setSortType(e.target.value)}
           className="px-4 py-2 border rounded-lg text-sm focus:outline-none"
@@ -57,23 +68,37 @@ const Installation = () => {
       </div>
 
       <div className="mt-6 space-y-4">
-        {sortedApps.length === 0 ? (<div className="text-center text-gray-400 mt-10">
-            No installed apps yet  </div>) : (
+        {sortedApps.length === 0 ? (
+          <div className="text-center text-gray-400 mt-10">
+            No installed apps yet{" "}
+          </div>
+        ) : (
           sortedApps.map((app) => (
-            <div  key={app.id} className="flex flex-col md:flex-row items-start md:items-center
+            <div
+              key={app.id}
+              className="flex flex-col md:flex-row items-start md:items-center
               justify-between gap-4 p-4 md:p-5  rounded-xl border shadow-sm hover:shadow-md
-              transition hover:scale-[1.01]" >
+              transition hover:scale-[1.01]"
+            >
               <div className="flex items-start sm:items-center gap-4 w-full">
-                <img src={app.image} alt={app.title} className="w-14 h-14 sm:w-16 sm:h-16 
-                  md:w-20 md:h-20 rounded-xl object-cover bg-gray-200"/>
+                <img
+                  src={app.image}
+                  alt={app.title}
+                  className="w-14 h-14 sm:w-16 sm:h-16 
+                  md:w-20 md:h-20 rounded-xl object-cover bg-gray-200"
+                />
 
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-800 text-sm sm:text-base md:text-lg">
-                    {app.title}</h3>
+                    {app.title}
+                  </h3>
 
-                  <div className="flex flex-wrap items-center gap-2 sm:gap-4
-                    text-xs sm:text-sm mt-1">
-                    <span className="text-green-500 flex items-center gap-1"><IoMdDownload /> {app.downloads}
+                  <div
+                    className="flex flex-wrap items-center gap-2 sm:gap-4
+                    text-xs sm:text-sm mt-1"
+                  >
+                    <span className="text-green-500 flex items-center gap-1">
+                      <IoMdDownload /> {app.downloads}
                     </span>
 
                     <span className="text-orange-400 flex items-center gap-1">
@@ -87,7 +112,10 @@ const Installation = () => {
               <button
                 onClick={() => handleUninstall(app.id)}
                 className="w-full sm:w-auto px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg font-medium  bg-green-500 text-white
-                hover:bg-green-600 transition" >Uninstall</button>
+                hover:bg-green-600 transition"
+              >
+                Uninstall
+              </button>
             </div>
           ))
         )}
