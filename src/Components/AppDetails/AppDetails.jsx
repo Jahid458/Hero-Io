@@ -84,7 +84,7 @@ const AppDetails = () => {
             </div>
           </div>
 
-          <button
+          <button 
             onClick={() => handleInstall(id)}
             disabled={installed}
             className={`mt-4 px-6 py-2 rounded-lg font-semibold w-full sm:w-56 transition ${

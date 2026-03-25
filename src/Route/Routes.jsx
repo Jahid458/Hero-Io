@@ -4,12 +4,13 @@ import Home from "../Home/Home";
 import App from "../Components/App/App";
 import AppDetails from "../Components/AppDetails/AppDetails";
 import Error from "../Components/Error/Error";
+import Installation from "../Components/Installation/Installation";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement: <Error/>,
+    errorElement: <Error />,
     children: [
       {
         index: true,
@@ -17,7 +18,7 @@ export const routes = createBrowserRouter([
         loader: async () => {
           const res = await fetch("/data.json");
           return res.json();
-        },
+        }
       },
       {
         path: "apps",
@@ -25,7 +26,7 @@ export const routes = createBrowserRouter([
         loader: async () => {
           const res = await fetch("/data.json");
           return res.json();
-        },
+        }
       },
       {
         path: "apps/:id",
@@ -33,7 +34,15 @@ export const routes = createBrowserRouter([
         loader: async () => {
           const res = await fetch("/data.json");
           return res.json();
-        },
+        }
+      },
+      {
+        path: "installation",
+        Component: Installation,
+        loader: async () => {
+          const res = await fetch("/data.json");
+          return res.json();
+        }
       },
     ],
   },

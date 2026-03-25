@@ -1,5 +1,3 @@
-import toast from "react-hot-toast";
-
 const getInstalledApps = () => {
   const storeInstallApps = localStorage.getItem("installedApps");
   if (storeInstallApps) {
@@ -26,7 +24,6 @@ const uninstallApp = (id) => {
   const installedApps = installedAppsstring.map((i) => parseInt(i));
   const updated = installedApps.filter((appId) => appId !== id);
   localStorage.setItem("installedApps", JSON.stringify(updated));
-  toast("App Uninstalled!");
 };
 
 export { getInstalledApps, addInstallApps, uninstallApp };
