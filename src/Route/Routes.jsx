@@ -3,11 +3,13 @@ import Main from "../Main/Main";
 import Home from "../Home/Home";
 import App from "../Components/App/App";
 import AppDetails from "../Components/AppDetails/AppDetails";
+import Error from "../Components/Error/Error";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <Error/>,
     children: [
       {
         index: true,

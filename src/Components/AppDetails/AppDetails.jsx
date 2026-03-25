@@ -10,8 +10,8 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import toast, { Toaster } from 'react-hot-toast';
-import AppError from '../Error/AppError';
 import { addInstallApps } from '../../Js/AddDb';
+import AppError from '../Error/AppError';
 
 const AppDetails = () => {
   const data = useLoaderData();
@@ -20,7 +20,7 @@ const AppDetails = () => {
   const app = data.find((a) => a.id === parseInt(id));
   const [installed, setInstalled] = useState(false);
 
-  // if (!app) return <AppError />;
+  if (!app) return <AppError />;
 
   const {
     title,
@@ -44,7 +44,6 @@ const AppDetails = () => {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
       <Toaster position="top-right" />
 
-      {/* Top Section */}
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-start pb-8 border-b">
         <img
           src={image}
@@ -56,13 +55,12 @@ const AppDetails = () => {
           <h1 className="text-2xl md:text-3xl font-bold">{title}</h1>
 
           <p className="text-sm text-gray-500">
-            Developed by{' '}
+            Developed by
             <span className="text-green-500 font-medium">
               {companyName}
             </span>
           </p>
 
-          {/* Stats */}
           <div className="grid grid-cols-3 gap-4 md:flex md:gap-10 mt-4">
             <div>
               <p className="text-sm text-gray-500">Downloads</p>
@@ -86,7 +84,6 @@ const AppDetails = () => {
             </div>
           </div>
 
-          {/* Button */}
           <button
             onClick={() => handleInstall(id)}
             disabled={installed}
@@ -103,7 +100,6 @@ const AppDetails = () => {
         </div>
       </div>
 
-      {/* Chart Section */}
       <div className="py-8 border-b">
         <h2 className="text-xl font-bold mb-6 text-center md:text-left">
           Ratings
@@ -120,7 +116,7 @@ const AppDetails = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* Description */}
+
       <div className="py-8">
         <h2 className="text-xl font-bold mb-4 text-center md:text-left">
           Description
